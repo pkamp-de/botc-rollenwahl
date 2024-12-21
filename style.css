@@ -3,12 +3,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f3f3f3;
+  background-color: #37153A; /* Hintergrundfarbe geändert */
   color: #333;
 }
 
 h1, h2 {
   text-align: center;
+  color: #fff; /* Überschriften in Weiß für besseren Kontrast */
 }
 
 /* Container für die Rollenauswahl (Spielleiter) */
