@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Blood on the Clocktower - Rollen-Zufallsauswahl</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood on the Clocktower - Rollen auswählen</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Auswahlschnittstelle für den Spielleiter -->
   <section id="role-selection">
     <h1>Rollen auswählen</h1>
-    <div id="roles-container">
-      <!-- Dynamisch via JavaScript generierte Checkboxen -->
-    </div>
+    <p id="selection-counter">Ausgewählt: <span id="counter">0</span></p>
 
-    <!-- Bereich für Einstellungen (z. B. Anzahl Spieler) -->
-    <div id="settings">
-      <label for="playerCount">Anzahl Spieler:</label>
-      <input type="number" id="playerCount" value="5" min="1" />
+    <!-- Kategorien -->
+    <div id="categories-container">
+      <div class="category" id="dorfbewohner">
+        <h2>Dorfbewohner</h2>
+        <div class="role-grid"></div>
+      </div>
+      <div class="category" id="aussenseiter">
+        <h2>Außenseiter</h2>
+        <div class="role-grid"></div>
+      </div>
+      <div class="category" id="lakei">
+        <h2>Lakei</h2>
+        <div class="role-grid"></div>
+      </div>
+      <div class="category" id="daemon">
+        <h2>Dämon</h2>
+        <div class="role-grid"></div>
+      </div>
     </div>
-
-    <button id="confirmRoles">Bestätigen</button>
   </section>
 
-  <!-- Bereich, in dem später die Kacheln angezeigt werden -->
-  <section id="cards-area" class="hidden">
-    <h2>Rollen-Auswahl für Spieler</h2>
-    <div id="cards-container">
-      <!-- Dynamisch via JavaScript generierte Kacheln -->
-    </div>
-  </section>
-
-  <!-- Einbindung der Daten (Liste aller Rollen) -->
   <script src="data.js"></script>
-  <!-- Hauptskript mit der Logik -->
   <script src="app.js"></script>
 </body>
 </html>
