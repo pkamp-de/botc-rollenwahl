@@ -106,5 +106,17 @@ const ALL_ROLES = [
     category: "Dämon",
     ability: "Jede Nacht wählen die Minions aus, wer auf Lil' Monsta aufpasst und „der Dämon ist“. Jede Nacht* könnte ein Spieler sterben. [+1 Minion]",
     icon: "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_lilmonsta.png"
+  },
+  {
+    name: "Marionette",
+    category: "Lakai",
+    ability: "Du denkst, du bist ein guter Charakter, aber das bist du nicht. Der Dämon weiß, wer du bist. [Du bist Nachbar des Dämons]",
+    icon: "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_marionette.png"
+  },
+  {
+    name: "Mezepheles",
+    category: "Lakai",
+    ability: "Du lernst ein geheimes Wort. Der erste gute Spieler, der dieses Wort sagt, wird an diesem Abend böse.",
+    icon: "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_mezepheles.png"
   }
 ];
