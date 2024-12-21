@@ -124,3 +124,12 @@ h1, h2 {
 .hidden {
   display: none !important;
 }
+
+/* Verdeckte Karten mit Hintergrundbild */
+.card.covered {
+  background-color: #bbb;
+  color: transparent;
+  background-image: url('https://mail.bloodontheclocktower.com/img/website/demon-head.png');
+  background-size: cover;
+  background-position: center;
+}
