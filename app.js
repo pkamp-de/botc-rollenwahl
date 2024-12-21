@@ -40,20 +40,20 @@ function populateRoles() {
 
 populateRoles();
 
+// Simple functionality for the finish button
 document.getElementById("finish-selection").addEventListener("click", () => {
   if (selectedCount === 0) {
     alert("Bitte wähle mindestens eine Rolle aus, bevor du fortfährst.");
     return;
   }
 
+  // Collect selected roles
   const selectedRoles = [];
   document.querySelectorAll(".role-card.selected").forEach(card => {
     const roleName = card.querySelector("h3").textContent;
     selectedRoles.push(roleName);
   });
 
-  console.log("Ausgewählte Rollen:", selectedRoles);
-
-  // Übergang zur nächsten Ansicht
-  alert("Die Rollen wurden gespeichert. Weiter zur nächsten Ansicht!");
+  // Display confirmation message
+  alert(`Die Auswahl wurde abgeschlossen! Ausgewählte Rollen: ${selectedRoles.join(", ")}`);
 });
