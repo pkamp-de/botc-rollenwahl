@@ -4,6 +4,7 @@ const confirmRolesBtn = document.getElementById("confirmRoles");
 const cardsArea = document.getElementById("cards-area");
 const cardsContainer = document.getElementById("cards-container");
 const playerCountInput = document.getElementById("playerCount");
+const roleSelectionSection = document.getElementById("role-selection"); // Add this for hiding
 
 function generateRoleCheckboxes() {
   ALL_ROLES.forEach((role, index) => {
@@ -45,6 +46,7 @@ confirmRolesBtn.addEventListener("click", () => {
     playerCount = 1;
   }
 
+  roleSelectionSection.classList.add("hidden"); // Hide the Game Master section
   cardsArea.classList.remove("hidden");
   cardsContainer.innerHTML = "";
   createCards(selectedRoles, playerCount);
