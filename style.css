@@ -81,15 +81,17 @@ h1, h2 {
 .card {
   position: relative;
   width: 150px;
-  height: 200px;
+  height: auto;
   background-color: #ddd;
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
   user-select: none;
   text-align: center;
+  padding: 10px;
   transition: transform 0.3s;
 }
 
@@ -99,27 +101,23 @@ h1, h2 {
 
 /* Bild im aufgedeckten Zustand */
 .card img {
-  max-width: 90%;
-  max-height: 70%;
-  display: block;
-  margin: 0 auto 8px;
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
 }
 
-/* Rollenname */
+/* Rollentitel */
 .card .role-name {
   font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 /* Rollenfähigkeit */
 .card .role-ability {
-  font-size: 0.8rem;
-  margin-top: 4px;
-}
-
-/* Start: verdeckt = kein Inhalt sichtbar */
-.card.covered {
-  background-color: #bbb;
-  color: transparent;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* Bereich ausblenden */
