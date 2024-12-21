@@ -30,8 +30,8 @@ h1, h2 {
 }
 
 .role-card {
-  width: 150px;
-  height: 200px;
+  width: 180px; /* Vergrößerte Breite */
+  height: 240px; /* Vergrößerte Höhe */
   background-color: #ddd;
   border-radius: 8px;
   display: flex;
@@ -39,25 +39,27 @@ h1, h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
 
 .role-card img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 120px; /* Größeres Logo */
+  max-height: 120px;
   margin-bottom: 10px;
 }
 
 .role-card h3 {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Größerer Text */
   margin: 5px 0;
   color: black;
 }
 
 .role-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: black;
+  text-align: center;
+  padding: 0 5px;
 }
 
 .covered {
@@ -71,5 +73,12 @@ h1, h2 {
 .covered h3,
 .covered p,
 .covered img {
-  display: none; /* Verstecke Inhalt */
+  display: none; /* Verstecke Inhalte */
+}
+
+/* Farbliche Hervorhebung für ausgewählte Kacheln */
+.role-card.selected {
+  background-color: #4CAF50; /* Grün als Beispiel */
+  color: white;
+  box-shadow: 0 0 15px #4CAF50; /* Leuchtender Rahmen */
 }
