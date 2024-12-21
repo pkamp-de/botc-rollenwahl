@@ -50,7 +50,8 @@ document.getElementById("finish-selection").addEventListener("click", () => {
   const selectedRoles = [];
   document.querySelectorAll(".role-card.selected").forEach(card => {
     const roleName = card.querySelector("h3").textContent;
-    selectedRoles.push(roleName);
+    const roleData = ALL_ROLES.find(role => role.name === roleName);
+    selectedRoles.push(roleData);
   });
 
   // Spieleransicht generieren
@@ -66,13 +67,16 @@ document.getElementById("finish-selection").addEventListener("click", () => {
   selectedRoles.forEach(role => {
     const card = document.createElement("div");
     card.className = "role-card covered";
-    card.innerHTML = `<p>?</p>`;
+    card.innerHTML = `
+      <img src="${role.icon}" alt="${role.name}">
+      <h3>${role.name}</h3>
+      <p>${role.ability}</p>
+    `;
 
     // Klick zum Aufdecken der Kacheln
     card.addEventListener("click", () => {
       if (card.classList.contains("covered")) {
         card.classList.remove("covered");
-        card.innerHTML = `<h3>${role}</h3>`;
       } else {
         card.style.display = "none"; // Kachel entfernen, nachdem sie angesehen wurde
       }
