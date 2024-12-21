@@ -1,7 +1,7 @@
 const categories = {
   Dorfbewohner: document.querySelector("#dorfbewohner .role-grid"),
   Außenseiter: document.querySelector("#aussenseiter .role-grid"),
-  Lakei: document.querySelector("#lakai .role-grid"),
+  Lakai: document.querySelector("#lakai .role-grid"),
   Dämon: document.querySelector("#daemon .role-grid")
 };
 
