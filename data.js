@@ -44,7 +44,7 @@ const ALL_ROLES = [
   {
     name: "Kannibale",
     category: "Dorfbewohner",
-    ability: "Du hast die Fähigkeit, den kürzlich getöteten Hingerichteten zu töten. Wenn es sich um einen bösen Spieler handelt, wirst du vergiftet, bis ein guter Spieler durch Hinrichtung stirbt.",
+    ability: "Du hast die Fähigkeit des kürzlich getöteten Hingerichteten. Wenn er böse ist, bist du vergiftet, bis ein guter Spieler durch Hinrichtung stirbt.",
     icon: "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_cannibal.png"
   },
   {
