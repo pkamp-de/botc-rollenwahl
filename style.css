@@ -80,14 +80,14 @@ h1, h2 {
 /* Kacheldesign */
 .card {
   position: relative;
-  width: 150px;
-  height: auto;
+  width: 200px; /* Breiter */
+  height: 300px; /* Höher */
   background-color: #ddd;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   cursor: pointer;
   user-select: none;
   text-align: center;
@@ -130,6 +130,9 @@ h1, h2 {
   background-color: #bbb;
   color: transparent;
   background-image: url('https://mail.bloodontheclocktower.com/img/website/demon-head.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+  width: 200px; /* Gleiche Breite wie oben */
+  height: 300px; /* Gleiche Höhe wie oben */
 }
