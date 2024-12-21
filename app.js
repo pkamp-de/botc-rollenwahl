@@ -13,7 +13,6 @@ function createRoleCard(role) {
   card.innerHTML = `
     <img src="${role.icon}" alt="${role.name}">
     <h3>${role.name}</h3>
-    <p>${role.ability}</p>
   `;
 
   card.addEventListener("click", () => {
@@ -40,3 +39,21 @@ function populateRoles() {
 }
 
 populateRoles();
+
+document.getElementById("finish-selection").addEventListener("click", () => {
+  if (selectedCount === 0) {
+    alert("Bitte wähle mindestens eine Rolle aus, bevor du fortfährst.");
+    return;
+  }
+
+  const selectedRoles = [];
+  document.querySelectorAll(".role-card.selected").forEach(card => {
+    const roleName = card.querySelector("h3").textContent;
+    selectedRoles.push(roleName);
+  });
+
+  console.log("Ausgewählte Rollen:", selectedRoles);
+
+  // Übergang zur nächsten Ansicht
+  alert("Die Rollen wurden gespeichert. Weiter zur nächsten Ansicht!");
+});
