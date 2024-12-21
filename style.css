@@ -31,7 +31,7 @@ h1, h2 {
 
 .role-card {
   width: 180px; /* Vergrößerte Breite */
-  height: 240px; /* Vergrößerte Höhe */
+  height: 320px; /* Vergrößerte Höhe */
   background-color: #ddd;
   border-radius: 8px;
   display: flex;
