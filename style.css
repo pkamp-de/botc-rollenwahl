@@ -30,8 +30,8 @@ h1, h2 {
 }
 
 .role-card {
-  width: 180px; /* Vergrößerte Breite */
-  height: 320px; /* Vergrößerte Höhe */
+  width: 250px; /* Vergrößerte Breite */
+  height: 360px; /* Vergrößerte Höhe */
   background-color: #ddd;
   border-radius: 8px;
   display: flex;
