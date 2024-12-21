@@ -65,7 +65,7 @@ h1, h2 {
 .covered {
   background-color: #ccc;
   background-image: url('https://mail.bloodontheclocktower.com/img/website/demon-head.png');
-  background-size: cover;
+  background-size: 160px auto; /* Breite auf 160px, Höhe automatisch */
   background-position: center;
   background-repeat: no-repeat;
 }
