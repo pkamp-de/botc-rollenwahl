@@ -1,0 +1,128 @@
+/* Grundlegendes Seitenlayout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Container für die Rollenauswahl (Spielleiter) */
+#role-selection {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#roles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.role-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.role-checkbox label {
+  margin-left: 0.5rem;
+}
+
+/* Einstellungsbereich (z. B. Anzahl Spieler) */
+#settings {
+  margin-top: 1rem;
+}
+
+#playerCount {
+  width: 60px;
+  margin-left: 0.5rem;
+}
+
+/* Button */
+#confirmRoles {
+  display: block;
+  margin: 1rem auto 0 auto;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Bereich, in dem die Kacheln angezeigt werden */
+#cards-area {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Kacheldesign */
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Bild im aufgedeckten Zustand */
+.card img {
+  max-width: 90%;
+  max-height: 70%;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* Rollenname */
+.card .role-name {
+  font-weight: bold;
+}
+
+/* Rollenfähigkeit */
+.card .role-ability {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Start: verdeckt = kein Inhalt sichtbar */
+.card.covered {
+  background-color: #bbb;
+  color: transparent;
+}
+
+/* Bereich ausblenden */
+.hidden {
+  display: none;
+}
