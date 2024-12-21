@@ -60,6 +60,24 @@ const ALL_ROLES = [
     icon: "https://wiki.bloodontheclocktower.com/images/2/26/Icon_amnesiac.png"
   },
   {
+    name: "Alsaahir",
+    category: "Dorfbewohner",
+    ability: "Jeden Tag, wenn du öffentlich rätst, wer die Lakaien und Dämonen sind, gewinnt das Gute.",
+    icon: "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_alsaahir.png"
+  },
+  {
+    name: "Werwolf",
+    category: "Dorfbewohner",
+    ability: "Jede Nacht*: Wähle einen lebenden Spieler. Wenn dieser gut ist, stirbt er, und der Dämon tötet diese Nacht nicht. Ein guter Spieler wird als böse registriert.",
+    icon: "https://wiki.bloodontheclocktower.com/images/9/92/Icon_lycanthrope.png"
+  },
+  {
+    name: "Elfe",
+    category: "Dorfbewohner",
+    ability: "Du startest, indem du einen spielenden Dorfbewohner kennst. Wenn du verrückt danach warst, dass du dieser Charakter bist, erhältst du dessen Fähigkeit, wenn er stirbt.",
+    icon: "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_pixie.png"
+  },
+  {
     name: "Jungfer",
     category: "Außenseiter",
     ability: "Alle Lakaien wissen, dass eine Jungfer im Spiel ist. Wenn ein Lakai dich öffentlich errät (einmal), verliert dein Team.",
@@ -118,5 +136,11 @@ const ALL_ROLES = [
     category: "Lakai",
     ability: "Du lernst ein geheimes Wort. Der erste gute Spieler, der dieses Wort sagt, wird an diesem Abend böse.",
     icon: "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_mezepheles.png"
+  },
+  {
+    name: "Verräter",
+    category: "Außenseiter",
+    ability: "Jedes Minion erhält 3 Bluffs.",
+    icon: "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png"
   }
 ];
