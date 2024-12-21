@@ -7,6 +7,15 @@ const categories = {
 
 let selectedCount = 0;
 
+// Funktion zum Mischen eines Arrays
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function createRoleCard(role) {
   const card = document.createElement("div");
   card.className = "role-card";
@@ -54,6 +63,9 @@ document.getElementById("finish-selection").addEventListener("click", () => {
     selectedRoles.push(roleData);
   });
 
+  // Rollen zufällig mischen
+  const shuffledRoles = shuffle(selectedRoles);
+
   // Spieleransicht generieren
   const roleSelectionSection = document.getElementById("role-selection");
   roleSelectionSection.innerHTML = `
@@ -64,7 +76,7 @@ document.getElementById("finish-selection").addEventListener("click", () => {
   const cardsContainer = document.getElementById("cards-container");
 
   // Verdeckte Kacheln für Spieler hinzufügen
-  selectedRoles.forEach(role => {
+  shuffledRoles.forEach(role => {
     const card = document.createElement("div");
     card.className = "role-card covered";
     card.innerHTML = `
