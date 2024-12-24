@@ -18,7 +18,8 @@ h1, h2 {
 
 .category {
   margin: 20px auto;
-  max-width: 1200px; /* Breitere maximale Breite für mehr Platz */
+  max-width: 1000px; /* Container-Breite etwas verkleinern */
+  padding: 0 10px; /* Weniger Abstand links und rechts */
 }
 
 /* Kategorie-Header für ein-/ausklappbare Bereiche */
@@ -41,23 +42,19 @@ h1, h2 {
 
 /* Container für Rollen */
 .role-container {
-  display: none; /* Standardmäßig ausgeblendet */
+  display: grid; /* Grid-Layout verwenden */
+  grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
+  gap: 1rem; /* Abstand zwischen den Rollen */
+  justify-content: center; /* Zentriert die Kacheln im Container */
   padding: 10px;
   background-color: #2F1233;
   border-radius: 8px;
   transition: max-height 0.3s ease-in-out; /* Für sanftes Ein-/Ausklappen */
 }
 
-.role-container.visible {
-  display: grid; /* Auf Grid-Layout umstellen */
-  grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
-  gap: 1rem; /* Abstand zwischen den Rollen */
-}
-
-/* Rollen-Kacheln */
 .role-card {
   width: 100%; /* Die Kachel füllt ihre Spalte aus */
-  max-width: 200px; /* Optionale Maximalbreite für größere Bildschirme */
+  max-width: 200px; /* Optionale Maximalbreite */
   height: 360px;
   background-color: #E9E4D8;
   border-radius: 8px;
