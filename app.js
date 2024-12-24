@@ -76,27 +76,39 @@ document.getElementById("finish-selection").addEventListener("click", () => {
     return;
   }
 
-  // Ausgewählte Rollen sammeln
+  // Debugging: Ausgewählte Rollen prüfen
   const selectedRoles = [];
   document.querySelectorAll(".role-card.selected").forEach(card => {
     const roleName = card.querySelector("h3").textContent;
     const roleData = ALL_ROLES.find(role => role.name === roleName);
     selectedRoles.push(roleData);
   });
+  console.log("Ausgewählte Rollen:", selectedRoles);
 
   // Rollen zufällig mischen
   const shuffledRoles = shuffle(selectedRoles);
+  console.log("Zufällig gemischte Rollen:", shuffledRoles);
 
   // Spieleransicht generieren
   const roleSelectionSection = document.getElementById("role-selection");
+  console.log("roleSelectionSection:", roleSelectionSection);
+
+  if (!roleSelectionSection) {
+    console.error("Fehler: Der Container 'role-selection' wurde nicht gefunden!");
+    return;
+  }
+
   roleSelectionSection.innerHTML = `
     <h1>Rollen-Auswahl für Spieler</h1>
     <div id="cards-container" class="role-grid"></div>
   `;
 
   const cardsContainer = document.getElementById("cards-container");
+  if (!cardsContainer) {
+    console.error("Fehler: Der Container 'cards-container' wurde nicht gefunden!");
+    return;
+  }
 
-  // Verdeckte Kacheln für Spieler hinzufügen
   shuffledRoles.forEach(role => {
     const card = document.createElement("div");
     card.className = "role-card covered";
@@ -105,8 +117,6 @@ document.getElementById("finish-selection").addEventListener("click", () => {
       <h3>${role.name}</h3>
       <p>${role.ability}</p>
     `;
-
-    // Klick zum Aufdecken der Kacheln
     card.addEventListener("click", () => {
       if (card.classList.contains("covered")) {
         card.classList.remove("covered");
@@ -114,7 +124,6 @@ document.getElementById("finish-selection").addEventListener("click", () => {
         card.style.display = "none"; // Kachel entfernen, nachdem sie angesehen wurde
       }
     });
-
     cardsContainer.appendChild(card);
   });
 });
