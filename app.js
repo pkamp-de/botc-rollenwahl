@@ -47,22 +47,27 @@ function populateRoles() {
   });
 }
 
-// Ein-/Ausklappbare Kategorien
+// Initialisiere den Standardzustand der Container (alle eingeklappt)
+function initializeDefaultView() {
+  document.querySelectorAll(".role-container").forEach(container => {
+    container.classList.remove("visible"); // Alle Container einklappen
+  });
+}
+
+// Füge Ein-/Ausklappbare Logik hinzu
 function addCategoryToggle() {
   document.querySelectorAll(".category-header").forEach(header => {
+    console.log("Header gefunden:", header.textContent); // Debug-Ausgabe
     header.addEventListener("click", () => {
       const roleContainer = header.nextElementSibling; // Nächster Container nach dem Header
-      if (roleContainer.classList.contains("visible")) {
-        roleContainer.classList.remove("visible");
-      } else {
-        roleContainer.classList.add("visible");
-      }
+      roleContainer.classList.toggle("visible"); // Sichtbarkeit umschalten
     });
   });
 }
 
 // Initialisiere Rollen und Ein-/Ausklappen
 populateRoles();
+initializeDefaultView(); // Setze den Standardzustand
 addCategoryToggle();
 
 document.getElementById("finish-selection").addEventListener("click", () => {
