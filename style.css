@@ -42,7 +42,7 @@ h1, h2 {
 
 /* Container für Rollen */
 .role-container {
-  display: grid; /* Grid-Layout verwenden */
+  display: none; /* Standardmäßig ausgeblendet */
   grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
   gap: 1rem; /* Abstand zwischen den Rollen */
   justify-content: center; /* Zentriert die Kacheln im Container */
@@ -50,6 +50,10 @@ h1, h2 {
   background-color: #2F1233;
   border-radius: 8px;
   transition: max-height 0.3s ease-in-out; /* Für sanftes Ein-/Ausklappen */
+}
+
+.role-container.visible {
+  display: grid; /* Sichtbar im Grid-Layout */
 }
 
 .role-card {
