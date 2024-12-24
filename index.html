@@ -7,36 +7,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="role-selection">
-    <h1>THE GREAT HUNT - Ein Skript von Phil</h1>
-    <p id="selection-counter">Ausgewählt: <span id="counter">0</span></p>
-
-    <!-- Kategorien -->
-    <div id="categories-container">
-      <div class="category" id="dorfbewohner">
-        <h2>Dorfbewohner</h2>
-        <div class="role-grid"></div>
-      </div>
-      <div class="category" id="aussenseiter">
-        <h2>Außenseiter</h2>
-        <div class="role-grid"></div>
-      </div>
-      <div class="category" id="lakai">
-        <h2>Lakai</h2>
-        <div class="role-grid"></div>
-      </div>
-      <div class="category" id="daemon">
-        <h2>Dämon</h2>
-        <div class="role-grid"></div>
+  <header>
+    <h1>Blood on the Clocktower - Rollen auswählen</h1>
+    <p id="selection-counter">Ausgewählte Rollen: <span>0</span></p>
+  </header>
+  <main>
+    <!-- Kategorie: Dorfbewohner -->
+    <div class="category" id="dorfbewohner">
+      <h2 class="category-header">Dorfbewohner</h2>
+      <div class="role-container">
+        <!-- Rollen für Dorfbewohner werden hier eingefügt -->
       </div>
     </div>
-
-    <!-- Button zum Abschluss -->
-    <button id="finish-selection" style="width: 250px; height: 70px; font-size: 1.2rem; background-color: #E8E3D7; color: black; border: none; border-radius: 8px; cursor: pointer; display: block; margin: 20px auto;">
-      Auswahl abschließen
-    </button>
-  </section>
-
+    <!-- Kategorie: Außenseiter -->
+    <div class="category" id="aussenseiter">
+      <h2 class="category-header">Außenseiter</h2>
+      <div class="role-container">
+        <!-- Rollen für Außenseiter werden hier eingefügt -->
+      </div>
+    </div>
+    <!-- Kategorie: Lakaien -->
+    <div class="category" id="lakai">
+      <h2 class="category-header">Lakai</h2>
+      <div class="role-container">
+        <!-- Rollen für Lakaien werden hier eingefügt -->
+      </div>
+    </div>
+    <!-- Kategorie: Dämon -->
+    <div class="category" id="daemon">
+      <h2 class="category-header">Dämon</h2>
+      <div class="role-container">
+        <!-- Rollen für Dämonen werden hier eingefügt -->
+      </div>
+    </div>
+  </main>
+  <footer>
+    <button id="finish-selection">Auswahl abschließen</button>
+  </footer>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>

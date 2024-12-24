@@ -1,8 +1,8 @@
 const categories = {
-  Dorfbewohner: document.querySelector("#dorfbewohner .role-grid"),
-  Außenseiter: document.querySelector("#aussenseiter .role-grid"),
-  Lakai: document.querySelector("#lakai .role-grid"),
-  Dämon: document.querySelector("#daemon .role-grid")
+  Dorfbewohner: document.querySelector("#dorfbewohner .role-container"),
+  Außenseiter: document.querySelector("#aussenseiter .role-container"),
+  Lakai: document.querySelector("#lakai .role-container"),
+  Dämon: document.querySelector("#daemon .role-container")
 };
 
 let selectedCount = 0;
@@ -32,7 +32,7 @@ function createRoleCard(role) {
       card.classList.add("selected");
       selectedCount++;
     }
-    document.getElementById("counter").textContent = selectedCount;
+    document.getElementById("selection-counter").querySelector("span").textContent = selectedCount;
   });
 
   return card;
@@ -47,7 +47,23 @@ function populateRoles() {
   });
 }
 
+// Ein-/Ausklappbare Kategorien
+function addCategoryToggle() {
+  document.querySelectorAll(".category-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const roleContainer = header.nextElementSibling; // Nächster Container nach dem Header
+      if (roleContainer.classList.contains("visible")) {
+        roleContainer.classList.remove("visible");
+      } else {
+        roleContainer.classList.add("visible");
+      }
+    });
+  });
+}
+
+// Initialisiere Rollen und Ein-/Ausklappen
 populateRoles();
+addCategoryToggle();
 
 document.getElementById("finish-selection").addEventListener("click", () => {
   if (selectedCount === 0) {

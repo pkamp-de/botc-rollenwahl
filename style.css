@@ -21,6 +21,37 @@ h1, h2 {
   max-width: 900px;
 }
 
+/* Kategorie-Header für ein-/ausklappbare Bereiche */
+.category-header {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-header:hover {
+  background-color: #45A049; /* Leichte Farbänderung beim Hover */
+  transform: scale(1.02); /* Leichter Zoom-Effekt */
+}
+
+/* Container für Rollen */
+.role-container {
+  display: none; /* Standardmäßig ausgeblendet */
+  padding: 10px;
+  background-color: #2F1233;
+  border-radius: 8px;
+  transition: max-height 0.3s ease-in-out; /* Für sanftes Ein-/Ausklappen */
+}
+
+.role-container.visible {
+  display: block; /* Einblenden */
+}
+
 .role-grid {
   display: flex;
   flex-wrap: wrap;
@@ -30,8 +61,8 @@ h1, h2 {
 }
 
 .role-card {
-  width: 200px; /* Vergrößerte Breite */
-  height: 360px; /* Vergrößerte Höhe */
+  width: 200px;
+  height: 360px;
   background-color: #E9E4D8;
   border-radius: 8px;
   display: flex;
@@ -44,13 +75,13 @@ h1, h2 {
 }
 
 .role-card img {
-  max-width: 120px; /* Größeres Logo */
+  max-width: 120px;
   max-height: 120px;
   margin-bottom: 10px;
 }
 
 .role-card h3 {
-  font-size: 1.2rem; /* Größerer Text */
+  font-size: 1.2rem;
   margin: 5px 0;
   color: black;
 }
@@ -65,7 +96,7 @@ h1, h2 {
 .covered {
   background-color: #ccc;
   background-image: url('https://mail.bloodontheclocktower.com/img/website/demon-head.png');
-  background-size: 160px auto; /* Breite auf 160px, Höhe automatisch */
+  background-size: 160px auto;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -78,7 +109,7 @@ h1, h2 {
 
 /* Farbliche Hervorhebung für ausgewählte Kacheln */
 .role-card.selected {
-  background-color: #4CAF50; /* Grün als Beispiel */
+  background-color: #4CAF50;
   color: white;
-  box-shadow: 0 0 15px #4CAF50; /* Leuchtender Rahmen */
+  box-shadow: 0 0 15px #4CAF50;
 }
