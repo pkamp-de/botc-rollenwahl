@@ -18,7 +18,7 @@ h1, h2 {
 
 .category {
   margin: 20px auto;
-  max-width: 900px;
+  max-width: 1200px; /* Breitere maximale Breite für mehr Platz */
 }
 
 /* Kategorie-Header für ein-/ausklappbare Bereiche */
@@ -49,19 +49,15 @@ h1, h2 {
 }
 
 .role-container.visible {
-  display: block; /* Einblenden */
-}
-
-.role-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Vier Spalten */
+  display: grid; /* Auf Grid-Layout umstellen */
+  grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
   gap: 1rem; /* Abstand zwischen den Rollen */
-  justify-content: center;
-  margin-top: 10px;
 }
 
+/* Rollen-Kacheln */
 .role-card {
-  width: 100%; /* Passt die Kartenbreite an das Grid an */
+  width: 100%; /* Die Kachel füllt ihre Spalte aus */
+  max-width: 200px; /* Optionale Maximalbreite für größere Bildschirme */
   height: 360px;
   background-color: #E9E4D8;
   border-radius: 8px;
@@ -109,7 +105,7 @@ h1, h2 {
 
 /* Farbliche Hervorhebung für ausgewählte Kacheln */
 .role-card.selected {
-  background-color: #4CAF50;
+  background-color: #79ae7a;
   color: white;
-  box-shadow: 0 0 15px #4CAF50;
+  box-shadow: 0 0 15px #79ae7a;
 }
