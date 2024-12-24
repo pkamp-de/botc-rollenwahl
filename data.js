@@ -1,6 +1,7 @@
 const ALL_ROLES = [
   {
     name: "Bürgermeister",
+    script: "Trouble Brewing"
     category: "Dorfbewohner",
     ability: "Wenn nur noch 3 Spieler am Leben sind und keine Hinrichtung stattfindet, gewinnt dein Team. Wenn du nachts stirbst, könnte stattdessen ein anderer Spieler sterben.",
     icon: "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_mayor.png"
