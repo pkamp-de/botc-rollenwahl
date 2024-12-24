@@ -25,7 +25,7 @@ h1, h2 {
 .category-header {
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: #2f2f2f;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -35,7 +35,7 @@ h1, h2 {
 }
 
 .category-header:hover {
-  background-color: #45A049; /* Leichte Farbänderung beim Hover */
+  background-color: #444444; /* Leichte Farbänderung beim Hover */
   transform: scale(1.02); /* Leichter Zoom-Effekt */
 }
 
@@ -53,15 +53,15 @@ h1, h2 {
 }
 
 .role-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Vier Spalten */
+  gap: 1rem; /* Abstand zwischen den Rollen */
   justify-content: center;
   margin-top: 10px;
 }
 
 .role-card {
-  width: 200px;
+  width: 100%; /* Passt die Kartenbreite an das Grid an */
   height: 360px;
   background-color: #E9E4D8;
   border-radius: 8px;
@@ -75,8 +75,8 @@ h1, h2 {
 }
 
 .role-card img {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 100px;
+  max-height: 100px;
   margin-bottom: 10px;
 }
 
