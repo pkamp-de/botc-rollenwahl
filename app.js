@@ -100,8 +100,12 @@ document.getElementById("finish-selection").addEventListener("click", () => {
 
   // Spieleransicht anzeigen
   roleSelectionSection.style.display = "block"; // Sichtbar machen
-  roleSelectionSection.innerHTML = `
-    <h1>Ziehe deine Rolle und erkenne dein Schicksal</h1>
+roleSelectionSection.innerHTML = `
+    <div style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/pkamp-de/botc-rollenwahl/refs/heads/main/rollenwahl.png" 
+           alt="Rollenwahl Logo" 
+           style="max-width: 100%; height: auto;">
+    </div>
     <div id="cards-container" class="role-grid"></div>
   `;
 
