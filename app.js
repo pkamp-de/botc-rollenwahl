@@ -98,6 +98,8 @@ document.getElementById("finish-selection").addEventListener("click", () => {
     return;
   }
 
+  // Spieleransicht anzeigen
+  roleSelectionSection.style.display = "block"; // Sichtbar machen
   roleSelectionSection.innerHTML = `
     <h1>Rollen-Auswahl für Spieler</h1>
     <div id="cards-container" class="role-grid"></div>
@@ -109,6 +111,7 @@ document.getElementById("finish-selection").addEventListener("click", () => {
     return;
   }
 
+  // Verdeckte Kacheln für Spieler hinzufügen
   shuffledRoles.forEach(role => {
     const card = document.createElement("div");
     card.className = "role-card covered";
@@ -126,4 +129,6 @@ document.getElementById("finish-selection").addEventListener("click", () => {
     });
     cardsContainer.appendChild(card);
   });
+
+  console.log("Spieleransicht erfolgreich generiert!");
 });
