@@ -18,8 +18,8 @@ h1, h2 {
 
 .category {
   margin: 20px auto;
-  max-width: 1000px; /* Container-Breite etwas verkleinern */
-  padding: 0 10px; /* Weniger Abstand links und rechts */
+  max-width: 1000px; 
+  padding: 0 10px; 
 }
 
 /* Kategorie-Header für ein-/ausklappbare Bereiche */
@@ -36,30 +36,30 @@ h1, h2 {
 }
 
 .category-header:hover {
-  background-color: #444444; /* Leichte Farbänderung beim Hover */
-  transform: scale(1.02); /* Leichter Zoom-Effekt */
+  background-color: #444444;
+  transform: scale(1.02);
 }
 
 /* Container für Rollen */
 .role-container {
-  display: none; /* Standardmäßig ausgeblendet */
-  grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
-  gap: 5px; /* Weniger Abstand zwischen den Rollen */
-  justify-content: center; /* Zentriert die Kacheln im Container */
+  display: none;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  justify-content: center;
   padding: 10px;
   background-color: #2F1233;
   border-radius: 8px;
-  transition: max-height 0.3s ease-in-out; /* Für sanftes Ein-/Ausklappen */
+  transition: max-height 0.3s ease-in-out;
 }
 
 .role-container.visible {
-  display: grid; /* Sichtbar im Grid-Layout */
+  display: grid;
 }
 
 .role-card {
-  width: 100%; /* Die Kachel füllt ihre Spalte aus */
-  max-width: 250px; /* Größere Kacheln */
-  height: 300px; /* Höhe angepasst */
+  width: 100%; 
+  max-width: 220px; 
+  height: 300px;
   background-color: #E9E4D8;
   border-radius: 8px;
   display: flex;
@@ -72,13 +72,13 @@ h1, h2 {
 }
 
 .role-card img {
-  max-width: 120px; /* Größere Icons */
+  max-width: 120px; 
   max-height: 120px;
   margin-bottom: 10px;
 }
 
 .role-card h3 {
-  font-size: 1.4rem; /* Größerer Text */
+  font-size: 1.4rem; 
   margin: 5px 0;
   color: black;
 }
@@ -91,29 +91,32 @@ h1, h2 {
 }
 
 .covered {
-  background-color: #E9E4D8; /* Heller Hintergrund */
-  border: 2px solid #000; /* Optionaler Rahmen */
+  background-color: #E9E4D8;
+  border: 2px solid #000;
   background-image: url('https://mail.bloodontheclocktower.com/img/website/demon-head.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 450px; /* Höhe der verdeckten Karte erhöht */
-  width: 100%; /* Breite füllt die Spalte */
+  height: 300px;
+  width: 100%;
 }
 
 .covered h3,
 .covered p,
 .covered img {
-  display: none; /* Verstecke Inhalte */
+  display: none;
 }
 
 /* Anpassung für Spieleransicht */
 #cards-container {
-  display: grid; /* Grid-Layout verwenden */
-  grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
-  gap: 15px; /* Weniger Abstand zwischen den Kacheln */
-  justify-content: center; /* Zentriert die Kacheln im Container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 10px; 
+  justify-content: center; 
+  align-items: center; 
   padding: 20px;
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 /* Farbliche Hervorhebung für ausgewählte Kacheln */
@@ -125,25 +128,25 @@ h1, h2 {
 
 /* Button-Stil für "Auswahl abschließen" */
 button#finish-selection {
-  display: block; /* Block-Element für einfache Zentrierung */
-  margin: 20px auto; /* Zentriert den Button horizontal */
-  padding: 10px 20px; /* Innenabstand für besseren Klickbereich */
-  font-size: 1.2rem; /* Größere Schrift */
-  font-weight: bold; /* Fettgedruckter Text */
-  color: #333; /* Dunkelgrauer Text */
-  background-color: #D3D3D3; /* Hellgrauer Hintergrund */
-  border: none; /* Kein Rahmen */
-  border-radius: 8px; /* Abgerundete Ecken */
-  cursor: pointer; /* Zeigt an, dass es klickbar ist */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Weiche Übergänge */
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #D3D3D3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button#finish-selection:hover {
-  background-color: #C0C0C0; /* Dunkleres Grau beim Hover */
-  transform: scale(1.05); /* Leichter Zoom-Effekt */
+  background-color: #C0C0C0;
+  transform: scale(1.05);
 }
 
 button#finish-selection:active {
-  background-color: #A9A9A9; /* Noch dunkler beim Klick */
-  transform: scale(0.98); /* Leichter Druckeffekt */
+  background-color: #A9A9A9;
+  transform: scale(0.98);
 }
