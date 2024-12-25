@@ -44,7 +44,7 @@ h1, h2 {
 .role-container {
   display: none; /* Standardmäßig ausgeblendet */
   grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
-  gap: 1rem; /* Abstand zwischen den Rollen */
+  gap: 10px; /* Weniger Abstand zwischen den Rollen */
   justify-content: center; /* Zentriert die Kacheln im Container */
   padding: 10px;
   background-color: #2F1233;
@@ -58,8 +58,8 @@ h1, h2 {
 
 .role-card {
   width: 100%; /* Die Kachel füllt ihre Spalte aus */
-  max-width: 200px; /* Optionale Maximalbreite */
-  height: 360px;
+  max-width: 250px; /* Größere Kacheln */
+  height: 300px; /* Höhe angepasst */
   background-color: #E9E4D8;
   border-radius: 8px;
   display: flex;
@@ -72,13 +72,13 @@ h1, h2 {
 }
 
 .role-card img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 120px; /* Größere Icons */
+  max-height: 120px;
   margin-bottom: 10px;
 }
 
 .role-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Größerer Text */
   margin: 5px 0;
   color: black;
 }
@@ -97,7 +97,7 @@ h1, h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px; /* Höhe der verdeckten Karte */
+  height: 250px; /* Höhe der verdeckten Karte erhöht */
   width: 100%; /* Breite füllt die Spalte */
 }
 
@@ -111,7 +111,7 @@ h1, h2 {
 #cards-container {
   display: grid; /* Grid-Layout verwenden */
   grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
-  gap: 20px; /* Abstand zwischen den Kacheln */
+  gap: 15px; /* Weniger Abstand zwischen den Kacheln */
   justify-content: center; /* Zentriert die Kacheln im Container */
   padding: 20px;
 }
