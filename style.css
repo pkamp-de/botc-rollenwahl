@@ -44,7 +44,7 @@ h1, h2 {
 .role-container {
   display: none; /* Standardmäßig ausgeblendet */
   grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
-  gap: 10px; /* Weniger Abstand zwischen den Rollen */
+  gap: 5px; /* Weniger Abstand zwischen den Rollen */
   justify-content: center; /* Zentriert die Kacheln im Container */
   padding: 10px;
   background-color: #2F1233;
@@ -97,7 +97,7 @@ h1, h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 250px; /* Höhe der verdeckten Karte erhöht */
+  height: 450px; /* Höhe der verdeckten Karte erhöht */
   width: 100%; /* Breite füllt die Spalte */
 }
 
