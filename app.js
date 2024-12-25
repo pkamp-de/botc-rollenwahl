@@ -101,7 +101,7 @@ document.getElementById("finish-selection").addEventListener("click", () => {
   // Spieleransicht anzeigen
   roleSelectionSection.style.display = "block"; // Sichtbar machen
   roleSelectionSection.innerHTML = `
-    <h1>Rollen-Auswahl für Spieler</h1>
+    <h1>Ziehe deine Rolle und erkenne dein Schicksal</h1>
     <div id="cards-container" class="role-grid"></div>
   `;
 
