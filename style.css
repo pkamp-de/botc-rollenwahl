@@ -122,3 +122,28 @@ h1, h2 {
   color: white;
   box-shadow: 0 0 15px #79ae7a;
 }
+
+/* Button-Stil für "Auswahl abschließen" */
+button#finish-selection {
+  display: block; /* Block-Element für einfache Zentrierung */
+  margin: 20px auto; /* Zentriert den Button horizontal */
+  padding: 10px 20px; /* Innenabstand für besseren Klickbereich */
+  font-size: 1.2rem; /* Größere Schrift */
+  font-weight: bold; /* Fettgedruckter Text */
+  color: #333; /* Dunkelgrauer Text */
+  background-color: #D3D3D3; /* Hellgrauer Hintergrund */
+  border: none; /* Kein Rahmen */
+  border-radius: 8px; /* Abgerundete Ecken */
+  cursor: pointer; /* Zeigt an, dass es klickbar ist */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Weiche Übergänge */
+}
+
+button#finish-selection:hover {
+  background-color: #C0C0C0; /* Dunkleres Grau beim Hover */
+  transform: scale(1.05); /* Leichter Zoom-Effekt */
+}
+
+button#finish-selection:active {
+  background-color: #A9A9A9; /* Noch dunkler beim Klick */
+  transform: scale(0.98); /* Leichter Druckeffekt */
+}
