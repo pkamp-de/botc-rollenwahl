@@ -91,17 +91,29 @@ h1, h2 {
 }
 
 .covered {
-  background-color: #ccc;
+  background-color: #E9E4D8; /* Heller Hintergrund */
+  border: 2px solid #000; /* Optionaler Rahmen */
   background-image: url('https://mail.bloodontheclocktower.com/img/website/demon-head.png');
-  background-size: 160px auto;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 200px; /* Höhe der verdeckten Karte */
+  width: 100%; /* Breite füllt die Spalte */
 }
 
 .covered h3,
 .covered p,
 .covered img {
   display: none; /* Verstecke Inhalte */
+}
+
+/* Anpassung für Spieleransicht */
+#cards-container {
+  display: grid; /* Grid-Layout verwenden */
+  grid-template-columns: repeat(4, 1fr); /* Vier gleich große Spalten */
+  gap: 20px; /* Abstand zwischen den Kacheln */
+  justify-content: center; /* Zentriert die Kacheln im Container */
+  padding: 20px;
 }
 
 /* Farbliche Hervorhebung für ausgewählte Kacheln */
